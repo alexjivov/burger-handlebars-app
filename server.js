@@ -3,10 +3,10 @@ var express = require("express");
 var bodyParser = require("body-parser");
 
 //specifying port
-var port = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 //initializing app
-var app = exprsss();
+var app = express();
 
 // static content for the app from the directory - public -> app directory
 app.use(express.static("public"));
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 //Handlebars dependencies
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({defaultLayout: main}));
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
 //ROUTES import

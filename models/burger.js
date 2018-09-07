@@ -13,9 +13,9 @@ create: function(vals,cb) {
         cb(res);
     });
 },
-update:function(vals,cb) {
+update: function(vals,cb) {
     objColVals.date = new Date().toISOString().slice(0,19).replace('T','');
-    orm.update("burgers",objColVals,condition,function(res) {
+    orm.update("burgers", objColVals,condition,function(res) {
         cb(res);
     });
 },
