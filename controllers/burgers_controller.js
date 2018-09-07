@@ -9,6 +9,7 @@ var burger = require("../models/burger.js");
 //Create routes and set up routes logic 
 router.get("/",function (req, res) {
     burger.all(function(data) {
+        //handlebars burger data
         var hbsObject = {
             burgers: data
         };
@@ -22,7 +23,7 @@ router.get("/",function (req, res) {
 router.post("/api/burgers/:id", function(req,res) {
     burger.create([req.body.name], function(result) {
         //Send back new ID
-        res.json({id: result.insertzId});
+        res.json({id: result.insertId});
     });
 });
 

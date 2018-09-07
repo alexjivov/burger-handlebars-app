@@ -25,7 +25,7 @@ $(function() {
                 name: name
             };
 
-            //Sends POST request
+            //Sends POST request - it calls JavaScript to new URL 
             $.ajax("/api/burgers", {
                 type: "POST",
                 data: newBurger

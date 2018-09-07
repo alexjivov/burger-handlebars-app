@@ -9,7 +9,7 @@
             <table>
                 {{#each burgers}}
                     {{#unless devoured}}
-                    {{> burgers/burger-block}}
+                    {{burgers/burger-block}}
                     {{/unless}}
                 {{/each}}
             </table>
@@ -28,6 +28,6 @@
             <label for="name"></label>
             <textarea id="name" name="burger-name" rows="2" cols="40" placeholder="Feeling like a burger?"></textarea>
         </div>
-        <button type="submit">Add Burger</button>
+        <button type="submit">Add</button>
     </form>
 </div>

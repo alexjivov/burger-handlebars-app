@@ -35,6 +35,7 @@ function objectSql(ob) {
     return arr.toString();
 }
 
+// CAN COPY PASTE THIS INTO ALL FUTURE PROJECTS
 //Object for SQL statement functions
 var orm = {
     all: function (table, cb) {
@@ -69,7 +70,6 @@ var orm = {
     },
     create: function (table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
-
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
