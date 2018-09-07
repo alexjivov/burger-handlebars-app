@@ -49,7 +49,7 @@ var orm = {
         });
     },
     allOrder: function (table, orderCol, cb) {
-        var queryString = "SELECT * FROM" + table + " ORDER BY " + orderCol;
+        var queryString = "SELECT * FROM " + table + " ORDER BY " + orderCol;
 
         connection.query(queryString, function (err, result) {
             if (err) {
